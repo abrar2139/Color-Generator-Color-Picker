@@ -48,7 +48,7 @@ body{
     border: 3px solid white;
     margin: auto;
     display: grid;
-    margin-bottom: 50px;
+
 }
 .colorbox span{
     height: calc(100% - 20px);
@@ -64,6 +64,7 @@ body{
     background: transparent;
 }
 #output{
+    margin-bottom: 20px;
     place-self: center;
     background-color: transparent;
     border-radius: 10px;
@@ -88,7 +89,7 @@ body{
     }
 }
 #colorpicker{
-    margin-top: 10px;
+    margin-bottom: 20px;
     width: 50px;
     place-self: center;
     cursor: pointer;
@@ -108,10 +109,11 @@ body{
     /* background-color: var(--picked-color) !important; */
 }
 .btns{
-    margin-top: 10px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .btns button{
     cursor: pointer;
