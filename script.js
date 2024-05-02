@@ -23,8 +23,9 @@ const generateRandomHexValue = () => {
     colorBox.style.backgroundColor = hexvalue
     // colorPicker.dispatchEvent(new Event('input'));
 }
-const copingHexValue = () =>{
-    navigator.clipboard.writeText(output.value);
+const copingHexValue =async () =>{
+    try {
+      await  navigator.clipboard.writeText(output.value);
     customAlert.style.transform="translateX(0)";
     copyBtn.style.backgroundColor="#e135f8"
     copyBtn.style.color="black"
@@ -33,7 +34,11 @@ const copingHexValue = () =>{
         copyBtn.style.color="#e135f8"
         copyBtn.style.border="#e135f8 3px solid"
     customAlert.style.transform="translateX(calc(100% + 10px))"; 
-    }, 2000);
+    }, 2000); 
+    } catch (error) {
+        console.error('Failed to copy: ', error);
+    }
+   
 }
 const updateSwatchColor = () => {
     let pickedColor = colorPicker.value;
